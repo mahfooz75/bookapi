@@ -45,6 +45,7 @@ public class BookController {
         return new ResponseEntity<String>("Book with id:"+id+" deleted",HttpStatus.OK);
     }
 
+    //Update Book
     @PutMapping("/{id}")
     public ResponseEntity<?> update(@PathVariable Long id,@RequestBody Book book){
         Book oldBook=bookService.get(id);
